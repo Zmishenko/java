@@ -1,6 +1,8 @@
-package shape;
+package task1;
 
-public class Circle {
+import main.Shape;
+
+public class Circle implements Shape {
     private double radius;
 
     public Circle() {
@@ -28,5 +30,10 @@ public class Circle {
 
     public double P() {
         return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public void draw() {
+
     }
 }

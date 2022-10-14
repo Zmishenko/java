@@ -1,6 +1,8 @@
-package shape;
+package task1;
 
-public class Rectangle {
+import main.Shape;
+
+public class Rectangle implements Shape {
     private int v, h, x, y;
 
     public Rectangle() {
@@ -69,5 +71,10 @@ public class Rectangle {
 
     public boolean isSquare(){
         return getH() == getV();
+    }
+
+    @Override
+    public void draw() {
+
     }
 }

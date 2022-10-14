@@ -11,6 +11,8 @@ module com.example.tasks {
 
     opens com.example.tasks to javafx.fxml;
     exports com.example.tasks;
-    exports shape;
-    opens shape to javafx.fxml;
+    exports task1;
+    opens task1 to javafx.fxml;
+    exports main;
+    opens main to javafx.fxml;
 }
