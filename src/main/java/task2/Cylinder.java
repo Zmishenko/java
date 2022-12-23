@@ -1,10 +1,10 @@
 package task2;
 
-import main.Shape;
+public class Cylinder {
 
-public class Cylinder implements Shape {
-    @Override
-    public void draw() {
 
+    public double P() {
+        return 0;
     }
+
 }

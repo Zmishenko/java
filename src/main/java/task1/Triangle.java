@@ -1,11 +1,12 @@
 package task1;
 //https://www.calculat.org/ru/%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D1%82%D1%80/%D1%82%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA/
 //https://www.calculat.org/ru/%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D1%82%D1%80/%D0%BF%D1%80%D1%8F%D0%BC%D0%BE%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%82%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA/
+
 import main.Shape;
 
-public class Triangle implements Shape {
+public class Triangle extends Shape {
     private double v, h, x, y;
-
+    private double perimetr = 0;
     public Triangle() {
     }
 
@@ -61,15 +62,15 @@ public class Triangle implements Shape {
     public double P(){
         if (y == 0){
             y = Math.sqrt((getH() * getH()) + (getV() * getV()));
-            return getH() + getV() + getY();
+            return perimetr = getH() + getV() + getY();
         }else if (h == 0){
             h = Math.sqrt((getY() * getY()) - (getV() * getV()));
-            return getH() + getV() + getY();
+            return perimetr = getH() + getV() + getY();
         }else if (v == 0){
             v = Math.sqrt((getY() * getY()) - (getH() * getH()));
-            return getH() + getV() + getY();
+            return perimetr = getH() + getV() + getY();
         }else {
-            return getH() + getV() + getY();
+            return perimetr = getH() + getV() + getY();
         }
     }
 
@@ -84,8 +85,5 @@ public class Triangle implements Shape {
         return true;
     }
 
-    @Override
-    public void draw() {
 
-    }
 }

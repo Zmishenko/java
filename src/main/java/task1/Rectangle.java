@@ -2,9 +2,9 @@ package task1;
 
 import main.Shape;
 
-public class Rectangle implements Shape {
+public class Rectangle extends Shape{
     private int v, h, x, y;
-
+    private double perimetr = 0;
     public Rectangle() {
     }
 
@@ -58,7 +58,7 @@ public class Rectangle implements Shape {
     }
 
     public double P(){
-        return getH() + getH() + getV() + getV();
+        return perimetr = getH() + getH() + getV() + getV();
     }
 
     public double S(){
@@ -71,10 +71,5 @@ public class Rectangle implements Shape {
 
     public boolean isSquare(){
         return getH() == getV();
-    }
-
-    @Override
-    public void draw() {
-
     }
 }

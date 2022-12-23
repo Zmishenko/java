@@ -1,10 +1,10 @@
 package task2;
 
-import main.Shape;
+public class Pyramid {
 
-public class Pyramid implements Shape {
-    @Override
-    public void draw() {
 
+    public double P() {
+        return 0;
     }
+
 }

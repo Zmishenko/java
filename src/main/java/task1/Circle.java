@@ -2,9 +2,9 @@ package task1;
 
 import main.Shape;
 
-public class Circle implements Shape {
-    private double radius;
-
+public class Circle extends Shape {
+    private final double radius;
+    private double perimetr = 0;
     public Circle() {
         radius = 1;
     }
@@ -29,11 +29,6 @@ public class Circle implements Shape {
     }
 
     public double P() {
-        return 2 * Math.PI * radius;
-    }
-
-    @Override
-    public void draw() {
-
+        return perimetr = 2 * Math.PI * radius;
     }
 }

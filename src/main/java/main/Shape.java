@@ -1,11 +1,25 @@
 package main;
 
-public interface Shape {
+public class Shape implements Comparable<Shape> {
 
-    //implicitly public, static and final
-    public String LABLE = "Shape";
+    private double perimetr = 0;
 
-    //interface methods are implicitly abstract and public
-    void draw();
+    public Shape(double perimetr) {
+        this.perimetr = perimetr;
+    }
+
+    public Shape() {
+    }
+
+    public double getP(){
+
+        return perimetr;
+    }
+
+    @Override
+    public int compareTo(Shape o) {
+        return (int)(this.getP() - o.getP());
+
+    }
 }
 

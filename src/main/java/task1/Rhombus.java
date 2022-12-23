@@ -3,11 +3,13 @@ package task1;
 import main.Shape;
 
 //https://www.calculat.org/ru/%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C-%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D1%82%D1%80/%D1%80%D0%BE%D0%BC%D0%B1/
-public class Rhombus implements Shape {
+public class Rhombus extends Shape {
     //a - сторона h - высота, alpha - угол
     private double a, h;
     private double alpha1;
     private double alpha2;
+
+    private double perimetr = 0;
 
     public Rhombus() {
     }
@@ -26,13 +28,11 @@ public class Rhombus implements Shape {
     }
 
     public double P(){
-        double p;
-        return p = 4 * a;
+        return perimetr = 4 * a;
     }
 
     public double S(){
-        double s;
-        return s = a * h;
+        return a * h;
     }
 
     public double sinAlpha1(){
@@ -57,8 +57,4 @@ public class Rhombus implements Shape {
         return r = h/2;
     }
 
-    @Override
-    public void draw() {
-
-    }
 }

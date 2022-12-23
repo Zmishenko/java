@@ -13,7 +13,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        List<Object> objects = new ArrayList<>();
+        List<Shape> shapes = new ArrayList<>();
         Circle circle;
         Rectangle rectangle;
         Rhombus rhombus;
@@ -23,7 +23,6 @@ public class Main {
         boolean q = true;
         while (q){
             System.out.println("""
-
                     Выберите фигуру:\s
                     Круг - 1
                     Квардрат/Прямоугольник - 2
@@ -45,7 +44,7 @@ public class Main {
                             System.out.println("S: " + circle.S());
                             System.out.println("P: " + circle.P());
 
-                            objects.add(circle);
+                            shapes.add(circle);
                         } else {
                             System.out.println("Введите радиус больший 0\n");
                         }
@@ -71,7 +70,7 @@ public class Main {
                             System.out.println("P: " + rectangle.P());
                             System.out.println("S: " + rectangle.S());
                             System.out.println("Diagonal: " + rectangle.Diagonal());
-                            objects.add(rectangle);
+                            shapes.add(rectangle);
                         } else {
                             System.out.println("Введите длину и высоту большe 0\n");
                         }
@@ -98,7 +97,7 @@ public class Main {
                             System.out.println("d1: " + rhombus.Diagonal1());
                             System.out.println("d2: " + rhombus.Diagonal2());
                             System.out.println("r: " + rhombus.radius());
-                            objects.add(rhombus);
+                            shapes.add(rhombus);
                         } else {
                             System.out.print("\nОшибка\n");
                         }
@@ -126,7 +125,7 @@ public class Main {
                             System.out.println("P: " + triangle.P());
                             System.out.println("S: " + triangle.S());
 
-                            objects.add(triangle);
+                            shapes.add(triangle);
                         } else if (new Triangle(w, 0, 0, y).isExsist()) {
                             t4 = false;
                             triangle = new Triangle(w, 0, 0, y);
@@ -135,7 +134,7 @@ public class Main {
                             System.out.println("P: " + triangle.P());
                             System.out.println("S: " + triangle.S());
 
-                            objects.add(triangle);
+                            shapes.add(triangle);
                         } else if (new Triangle(0, h, 0, 0).isExsist()) {
                             t4 = false;
                             triangle = new Triangle(0, h, 0, 0);
@@ -144,7 +143,7 @@ public class Main {
                             System.out.println("P: " + triangle.P());
                             System.out.println("S: " + triangle.S());
 
-                            objects.add(triangle);
+                            shapes.add(triangle);
                         } else {
                             System.out.println("\nВведите минимум 2 значения больше 0");
                         }
@@ -155,10 +154,16 @@ public class Main {
                 }
             }
         }
+        if (!shapes.isEmpty()){
+//            shapes.forEach(System.out::println);
+//            System.out.println(shapes.remove(shapes.size()-1));
+//            System.out.println();
+//            shapes.forEach(System.out::println);
+            System.out.println("==============================");
+            Collections.sort((ArrayList<Shape>)shapes);
+            shapes.forEach(System.out::println);
+            System.out.println("==============================");
+        }
 
-        objects.forEach(System.out::println);
-        System.out.println(objects.remove(objects.size()-1));
-        System.out.println();
-        objects.forEach(System.out::println);
     }
 }
